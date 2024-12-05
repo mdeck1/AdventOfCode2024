@@ -25,7 +25,7 @@ class Day2 {
                 val nums:  MutableList<Int> = line.split("\\s+".toRegex()).map { s -> s.toInt() }.toMutableList()
                 var index = checkLine(nums)
                 if (index != 0) {
-                    var nums2 = nums.toMutableList()
+                    val nums2 = nums.toMutableList()
                     nums.removeAt(index)
                     nums2.removeAt(index - 1)
                     index = min(checkLine(nums), checkLine(nums2))

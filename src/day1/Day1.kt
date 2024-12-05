@@ -6,8 +6,8 @@ class Day1 {
         fun part1() {
             val file: File = Utils.getFile("day1\\day1data.txt")
             val lines: List<String> = file.readLines()
-            var leftLine: MutableList<Int> = ArrayList()
-            var rightLine: MutableList<Int> = ArrayList()
+            val leftLine: MutableList<Int> = ArrayList()
+            val rightLine: MutableList<Int> = ArrayList()
             for (line in lines) {
                 val nums: List<String> = line.split("\\s+".toRegex())
                 leftLine.add(nums[0].toInt())
@@ -26,14 +26,14 @@ class Day1 {
         fun part2() {
             val file: File = Utils.getFile("day1\\day1data.txt")
             val lines: List<String> = file.readLines()
-            var leftLine: MutableList<Int> = ArrayList()
-            var rightLine: MutableList<Int> = ArrayList()
+            val leftLine: MutableList<Int> = ArrayList()
+            val rightLine: MutableList<Int> = ArrayList()
             for (line in lines) {
                 val nums: List<String> = line.split("\\s+".toRegex())
                 leftLine.add(nums[0].toInt())
                 rightLine.add(nums[1].toInt())
             }
-            var map: MutableMap<Int, Int> = HashMap()
+            val map: MutableMap<Int, Int> = HashMap()
             for (num in rightLine) {
                 map.put(num, (map.getOrDefault(num, 0) + 1))
             }

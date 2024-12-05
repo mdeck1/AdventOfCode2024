@@ -1,6 +1,4 @@
 import java.io.File
-import kotlin.math.abs
-import kotlin.math.min
 
 class Day4 {
 

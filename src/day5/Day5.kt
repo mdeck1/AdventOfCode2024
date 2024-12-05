@@ -1,6 +1,4 @@
 import java.io.File
-import kotlin.math.abs
-import kotlin.math.min
 
 class Day5 {
 
@@ -9,9 +7,9 @@ class Day5 {
         fun part1() {
             val file: File = Utils.getFile(FILENAME)
             val lines: List<String> = file.readLines()
-            var map: MutableMap<Int, MutableList<Int>> = mutableMapOf()
-            var rules:Boolean = true
-            var count:Int = 0
+            val map: MutableMap<Int, MutableList<Int>> = mutableMapOf()
+            var rules = true
+            var count = 0
             for (i in lines.indices) {
                 if (lines[i] == "") {
                     rules = false
@@ -25,7 +23,7 @@ class Day5 {
                     }
                 } else {
                     val nums:List<Int> = lines[i].split(",").map({s -> s.toInt()})
-                    var valid:Boolean = true
+                    var valid = true
                     for (m in nums.indices) {
                         for (n in (m+1)..<nums.size) {
                             if (map.getOrDefault(nums[n], mutableListOf()).contains(nums[m])) {
@@ -48,9 +46,9 @@ class Day5 {
         fun part2() {
             val file: File = Utils.getFile(FILENAME)
             val lines: List<String> = file.readLines()
-            var map: MutableMap<Int, MutableList<Int>> = mutableMapOf()
-            var rules:Boolean = true
-            var count:Int = 0
+            val map: MutableMap<Int, MutableList<Int>> = mutableMapOf()
+            var rules = true
+            var count = 0
             for (i in lines.indices) {
                 if (lines[i] == "") {
                     rules = false
@@ -63,8 +61,8 @@ class Day5 {
                         map.getOrDefault(a, mutableListOf()).add(b)
                     }
                 } else {
-                    var nums:MutableList<Int> = lines[i].split(",").map({s -> s.toInt()}).toMutableList()
-                    var valid:Boolean = true
+                    val nums:MutableList<Int> = lines[i].split(",").map({s -> s.toInt()}).toMutableList()
+                    var valid = true
                     var m = 0
                     while (m < nums.size) {
                         for (n in (m+1)..<nums.size) {
