@@ -4,5 +4,5 @@ import Day3;
 
 
 fun main() {
-    Day6.part2()
+    Day8.part2()
 }
